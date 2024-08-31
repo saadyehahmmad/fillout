@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقييمات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+    <h1>رفع ملف <span>KPI</span>  جديد</h1>
+        <h1>ملف التقييمات</h1>
+        <h2>تأكد من أن صيغة الجدول هي <strong>.xlsx</strong> قبل الرفع.</h2>
+        <form id="upload-form" method="post" enctype="multipart/form-data">
+            <p class="info">يرجى رفع المستندات المطلوبة للموافقة عليها. تأكد من أن صيغة الملف هي <strong>.xlsx</strong>.</p>
+            <div class="status-message" id="status-message">الرجاء سحب الملف لرفعه</div>
+            <div class="file-name" id="file-name"></div>
+            <input type="file" name="file" id="file-input" accept=".xlsx" style="display: none;">
+            <button type="submit" id="upload-button">تحميل</button>
+        </form>
+    </div>
+
+    <div class="upload-area" id="upload-area">
+        <label for="file-input">اسحب الملف هنا أو اضغط للرفع</label>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+</html>
